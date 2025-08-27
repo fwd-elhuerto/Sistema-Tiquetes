@@ -2,7 +2,7 @@ async function getConsultas () {
     
     try {
         
-        const response =await fetch("http://localhost:3001/Consultas",{
+        const response =await fetch("http://localhost:3001/consultas",{
         method:'GET',
         headers : {
             'Content-Type': 'application/json'
@@ -13,7 +13,7 @@ async function getConsultas () {
         return Consultas
 
     } catch (error) {
-        console.error("Error al obtener los Consultas",error)
+        console.error("Error al obtener los consultas",error)
         throw error
     }
 }
@@ -25,7 +25,7 @@ async function postConsultas (consulta) {
     
     try {
         
-        const response =await fetch("http://localhost:3001/Consultas",{
+        const response =await fetch("http://localhost:3001/consultas",{
         method:'POST',
         headers : {
             'Content-Type': 'application/json' },
@@ -36,7 +36,7 @@ async function postConsultas (consulta) {
         return Consultas
 
     } catch (error) {
-        console.error("Error al guardar los Consultas",error)
+        console.error("Error al guardar los consultas",error)
         throw error
     }
 }

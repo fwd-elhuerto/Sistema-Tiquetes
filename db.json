@@ -1,8 +1,42 @@
 {
   "usuarios": [
-    
-  ],
-  "dudas": [
-    
+    {
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "jlopez",
+      "password": "abc123",
+      "tipo": "profesor"
+    },
+    {
+      "id": 2,
+      "usuario": "mcastro",
+      "password": "qwe789",
+      "tipo": "profesor"
+    },
+    {
+      "id": 3,
+      "usuario": "arivera",
+      "password": "zxc456",
+      "tipo": "estudiante"
+    }
+  ]
+}
+],
+  "consultas": [
+    {
+      "id": "d4a7",
+      "consulta": "hola?",
+      "fecha": "2025-08-27T16:45:53.240Z",
+      "estado": false,
+      "profesor": "barry"
+    },
+    {
+      "id": "fd95",
+      "consulta": "ggg",
+      "fecha": "2025-08-27T17:04:21.409Z",
+      "estado": true,
+      "profesor": "jeanca"
+    }
   ]
 }
