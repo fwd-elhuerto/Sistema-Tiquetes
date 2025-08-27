@@ -46,12 +46,12 @@ async function mostrarDuda() {
         fecha.textContent ="Generada:" + " " + elementCon.fecha
         profe.textContent ="Dirigida a:" + " " + elementCon.profesor
 
-        if (elementCon.estado = true) {
+        if (elementCon.estado === true) {
             activas.appendChild(areaConsulta)
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
-        }else if (elementCon.estado = false) {
+        }else {
             histConsultas.appendChild(areaConsulta);
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);

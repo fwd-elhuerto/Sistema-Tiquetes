@@ -1,8 +1,6 @@
 {
   "usuarios": [
     {
-  "usuarios": [
-    {
       "id": 1,
       "usuario": "jlopez",
       "password": "abc123",
@@ -20,9 +18,7 @@
       "password": "zxc456",
       "tipo": "estudiante"
     }
-  ]
-}
-],
+  ],
   "consultas": [
     {
       "id": "d4a7",

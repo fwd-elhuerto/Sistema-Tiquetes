@@ -6,8 +6,7 @@ import { postConsultas, getConsultas, putConsultas } from "../services/servicesC
 
 async function mostrarConsulta() {
     const dudaRecibida = await getConsultas();
-    /* activas.textContent = "";
-    histConsultas.textContent = ""; */
+    activas.textContent = "";
     for (let index = 0; index < dudaRecibida.length; index++) {
         const elementCon = dudaRecibida[index];
 
@@ -25,7 +24,7 @@ async function mostrarConsulta() {
         atender.type = 'checkbox'
         atender2.textContent = "Atendido"
 
-        if (elementCon.estado = true) {
+        if (elementCon.estado === true) {
             activas.appendChild(areaConsulta);
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
@@ -35,9 +34,10 @@ async function mostrarConsulta() {
         }
 
         atender.addEventListener("change", async function () {
-            if (atender.checked) {          
-                elementCon.estado = false;
-                dudaRecibida = await putConsultas();
+            if (atender.checked) {
+                elementCon.estado = false; // cambiar estado
+                await putConsultas(elementCon.id, elementCon); // guardar en db.json
+                mostrarConsulta(); // refrescar lista
             }
         })
     }
