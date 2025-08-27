@@ -1,5 +1,29 @@
 {
   "usuarios": [
+    {
+      "id": 1,
+      "usuario": "jlopez",
+      "password": "abc123",
+      "tipo": "profesor"
+    },
+    {
+      "id": 2,
+      "usuario": "mcastro",
+      "password": "qwe789",
+      "tipo": "profesor"
+    },
+    {
+      "id": 3,
+      "usuario": "arivera",
+      "password": "zxc456",
+      "tipo": "profesor"
+    },
+    {
+      "id": 4,
+      "usuario": "jlopessss",
+      "password": "1234",
+      "tipo": "estudiante"
+    }
     
   ],
   "dudas": [
