@@ -1,32 +1,36 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "usuario": "jlopez",
       "password": "abc123",
       "tipo": "profesor"
     },
     {
-      "id": 2,
+      "id": "2",
       "usuario": "mcastro",
       "password": "qwe789",
       "tipo": "profesor"
     },
     {
-      "id": 3,
+      "id": "3",
       "usuario": "arivera",
       "password": "zxc456",
       "tipo": "profesor"
     },
     {
-      "id": 4,
+      "id": "4",
       "usuario": "jlopessss",
       "password": "1234",
       "tipo": "estudiante"
+    },
+    {
+      "id": "4ec4",
+      "usuario": "roger",
+      "password": "asdsad",
+      "telefono": "46434565",
+      "tipo": "estudiante"
     }
-    
   ],
-  "dudas": [
-    
-  ]
+  "dudas": []
 }
