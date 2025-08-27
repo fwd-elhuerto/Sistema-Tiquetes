@@ -6,8 +6,8 @@ import { postConsultas, getConsultas, putConsultas } from "../services/servicesC
 
 async function mostrarConsulta() {
     const dudaRecibida = await getConsultas();
-    activas.textContent = "";
-    histConsultas.textContent = "";
+    /* activas.textContent = "";
+    histConsultas.textContent = ""; */
     for (let index = 0; index < dudaRecibida.length; index++) {
         const elementCon = dudaRecibida[index];
 
@@ -43,3 +43,4 @@ async function mostrarConsulta() {
     }
 
 }
+mostrarConsulta()
