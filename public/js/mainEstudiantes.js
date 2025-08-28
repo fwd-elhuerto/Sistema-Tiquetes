@@ -20,12 +20,14 @@ btnGuardar.addEventListener("click", async function () {
         fecha: fechaActual,
         estado: true,
         profesor: profesor.value,
-        usuario: traerUs.usuario
+        usuario: traerUs.usuario,
+        comentario: ""
     }
+     await Swal.fire('Consulta Enviada', 'Las consultas se atienden por orden de hora segun la cola del profesor', 'success');
+    const respuesta = await postConsultas(duda)
 
-    const respuesta = await postConsultas(duda)  
 } else{
-    Swal.fire('Error al guardar', 'Debe ingresar una tarea', 'error');
+    await Swal.fire('Error al guardar', 'Debe ingresar una tarea', 'error');
 }
 })
 
@@ -41,10 +43,12 @@ async function mostrarDuda() {
         let consulta =document.createElement("h3");
         let fecha = document.createElement("p");
         let profe = document.createElement("p");
+        let comentario = document.createElement("p");
 
         consulta.textContent= elementCon.consulta
         fecha.textContent ="Generada:" + " " + elementCon.fecha
         profe.textContent ="Dirigida a:" + " " + elementCon.profesor
+        comentario.textContent = "Comentarios privado: " + " " + elementCon.comentario
 
         if (elementCon.estado === true) {
             activas.appendChild(areaConsulta)
@@ -56,6 +60,11 @@ async function mostrarDuda() {
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
+            areaConsulta.appendChild(comentario);
+
+            if (elementCon.estado === false && index === dudaRecibida.length - 1) {
+                await Swal.fire('Nueva retroalimentación', 'El profesor respondió:' + elementCon.comentario, 'info');
+            }
         }
     }
 

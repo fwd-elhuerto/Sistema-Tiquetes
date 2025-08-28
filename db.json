@@ -1,19 +1,19 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "usuario": "jlopez",
       "password": "abc123",
       "tipo": "profesor"
     },
     {
-      "id": 2,
+      "id": "2",
       "usuario": "mcastro",
       "password": "qwe789",
       "tipo": "profesor"
     },
     {
-      "id": 3,
+      "id": "3",
       "usuario": "arivera",
       "password": "zxc456",
       "tipo": "estudiante"
@@ -21,18 +21,76 @@
   ],
   "consultas": [
     {
-      "id": "d4a7",
-      "consulta": "hola?",
-      "fecha": "2025-08-27T16:45:53.240Z",
+      "id": "930b",
+      "consulta": "como le encuentro sentido a mi vida",
+      "fecha": "2025-08-28T16:12:51.443Z",
       "estado": false,
-      "profesor": "barry"
+      "profesor": "Barry",
+      "comentario": "hola"
     },
     {
-      "id": "fd95",
-      "consulta": "ggg",
-      "fecha": "2025-08-27T17:04:21.409Z",
-      "estado": true,
-      "profesor": "jeanca"
+      "id": "15e3",
+      "consulta": "hhj",
+      "fecha": "2025-08-28T16:20:43.807Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": ""
+    },
+    {
+      "id": "1074",
+      "consulta": "sss",
+      "fecha": "2025-08-28T16:29:39.533Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": ""
+    },
+    {
+      "id": "5804",
+      "consulta": "gato",
+      "fecha": "2025-08-28T16:32:21.713Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": "hh"
+    },
+    {
+      "id": "654f",
+      "consulta": "jjjfh",
+      "fecha": "2025-08-28T16:36:00.839Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": "hola"
+    },
+    {
+      "id": "89e6",
+      "consulta": "como le encuentro sentido a mi vida",
+      "fecha": "2025-08-28T16:44:00.350Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": ""
+    },
+    {
+      "id": "d555",
+      "consulta": "fgrdhhhr",
+      "fecha": "2025-08-28T16:48:26.662Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": "trade"
+    },
+    {
+      "id": "76dc",
+      "consulta": "bbb",
+      "fecha": "2025-08-28T17:22:50.235Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": "hola"
+    },
+    {
+      "id": "8f4e",
+      "consulta": "hola",
+      "fecha": "2025-08-28T17:26:35.271Z",
+      "estado": false,
+      "profesor": "Barry",
+      "comentario": "hggh"
     }
   ]
 }

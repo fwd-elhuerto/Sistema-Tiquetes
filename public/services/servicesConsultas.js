@@ -64,11 +64,11 @@ async function deleteConsultas (id) {
 }
 export{deleteConsultas}
 
-async function putConsultas (consulta,id) {
+async function putConsultas (id, consulta) {
     
     try {
         
-        const response =await fetch("http://localhost:3001/Consultas/"+ id,{
+        const response =await fetch("http://localhost:3001/consultas/"+ id,{
         method:'PUT',
         headers : {
             'Content-Type': 'application/json'
