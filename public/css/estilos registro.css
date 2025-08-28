@@ -1,0 +1,19 @@
+body{
+    background-image: url(../imagenes/fondo\ 1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: darkviolet;
+}
+#registro{
+    display: grid;
+    justify-content: center;
+    
+}

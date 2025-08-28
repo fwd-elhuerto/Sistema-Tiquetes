@@ -1,23 +1,44 @@
+
 /* constantes a usar  */
-/*UN= Nombre de usuario/UC= contraseña de usuario*/
+/*UN= Nombre de usuario/ UC= Contraseña de usuario/ UT= Telefono de usuario/SD= sede de usuario*/
 const UN =document.getElementById("UN")
 const UC =document.getElementById("UC")
 const UT =document.getElementById("UT")
-const btInscribir =document.getElementById("btInscribir")
+const SD =document.getElementById("SD")
+const btRegistro =document.getElementById("btRegistro")
 
 /* funcion llamada desde el servises */
-import { postUsuarios, getUsuarios } from "../services/servicesUsuarios.js"
+import { getUsuarios,postUsuarios } from "../services/servicesUsuarios.js"
 
-btInscribir.addEventListener("click", async function getUsuarios(){
-    /* crear una constante que guarde las carateristicas de las pelicula (un objeto) */
-    const usuario= {
+
+
+/* el boton para guardar los usuarios  */
+btRegistro.addEventListener("click", async function getUsuarios() {
+    /* crear una constante que guarde las carateristicas de los usuario (un objeto) */
+    if (UN !="" && UC !="" && UT!="" ) {
+        const usuario= {
         usuario: UN.value,
         password: UC.value,
         telefono: UT.value,
-        tipo: "estudiante"
+        sede:SD.value
     }
-    /* constante que llama la funcion para los datos */
-    const Dusuarios = await postUsuarios(usuario)
-    console.log(Dusuarios);
-
+    /* constante que llama la funcion para subir los usuarios */
+    const DUsuarios = await postUsuarios(usuario)
+    console.log(DUsuarios);
+    window.location.href = "login.html";
+        
+    } else {
+        Swal.fire('Error al ingresar', 'Llene Todos Los Campos Solisitados', 'error');
+        
+    }
+    
 })
+
+/* fucion para limpiar el formulario  */
+function limpiar() {
+    UN.textContent="" 
+    UC.textContent=""
+    UT.textContent=""
+}
+
+limpiar()

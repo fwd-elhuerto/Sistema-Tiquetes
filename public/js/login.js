@@ -3,6 +3,7 @@
 const UN =document.getElementById("UN")
 const UC =document.getElementById("UC")
 const btEntrar =document.getElementById("btEntrar")
+const btRegistrar =document.getElementById("btRegistrar")
 
 /* const  =document.getElementById("") */
 /* funcion llamada desde el servises */
@@ -33,3 +34,7 @@ btEntrar.addEventListener("click", async function(){
     }
 
 })
+
+btRegistrar.addEventListener("click",
+    window.location.href = "registro.html"
+)

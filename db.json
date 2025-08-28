@@ -4,32 +4,25 @@
       "id": "1",
       "usuario": "jlopez",
       "password": "abc123",
-      "tipo": "profesor"
+      "telefono": 85954334,
+      "tipo": "profesor",
+      "sede": ""
     },
     {
       "id": "2",
       "usuario": "mcastro",
       "password": "qwe789",
-      "tipo": "profesor"
+      "telefono": 87652334,
+      "tipo": "profesor",
+      "sede": ""
     },
     {
       "id": "3",
       "usuario": "arivera",
       "password": "zxc456",
-      "tipo": "profesor"
-    },
-    {
-      "id": "4",
-      "usuario": "jlopessss",
-      "password": "1234",
-      "tipo": "estudiante"
-    },
-    {
-      "id": "4ec4",
-      "usuario": "roger",
-      "password": "asdsad",
-      "telefono": "46434565",
-      "tipo": "estudiante"
+      "telefono": 875092544,
+      "tipo": "profesor",
+      "sede": ""
     }
   ],
   "dudas": []
