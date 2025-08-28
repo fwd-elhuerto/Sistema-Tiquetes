@@ -4,23 +4,27 @@ const histConsultas =document.getElementById("histConsultas")
 const profesor =document.getElementById("profesor")
 const activas =document.getElementById("activas")
 
-
-const timestamp = Date.now();
-const fechaActual = new Date(timestamp);
 import { postUsuarios, getUsuarios } from "../services/servicesUsuarios.js"
 import { postConsultas, getConsultas } from "../services/servicesConsultas.js"
+const timestamp = Date.now();
+const fechaActual = new Date(timestamp);
+const usuarioEnSesion = sessionStorage.getItem("usuarioLogueado");
+const traerUsuarios = await getUsuarios();
+const usuarioLogueado = traerUsuarios.find(u => u.usuario === usuarioEnSesion);
+console.log(usuarioLogueado);
+
 
 
 btnGuardar.addEventListener("click", async function () {
-   const traerUs = await getUsuarios()
-   if (nuevaconsulta.value != "") {
+   if (nuevaconsulta.value.trim() != "") {
     
     const duda={ 
         consulta: nuevaconsulta.value,
         fecha: fechaActual,
         estado: true,
         profesor: profesor.value,
-        usuario: traerUs.usuario,
+        usuario: usuarioLogueado.usuario,
+        sede: usuarioLogueado.sede,
         comentario: ""
     }
      await Swal.fire('Consulta Enviada', 'Las consultas se atienden por orden de hora segun la cola del profesor', 'success');
@@ -36,8 +40,11 @@ async function mostrarDuda() {
     const dudaRecibida = await getConsultas();
     activas.textContent = "";
     histConsultas.textContent = "";
-    for (let index = 0; index < dudaRecibida.length; index++) {
-        const elementCon = dudaRecibida[index];
+    const misConsultas = dudaRecibida.filter(c => c.usuario === usuarioEnSesion);
+    for (let index = 0; index < misConsultas.length; index++) {
+        const elementCon = misConsultas[index];
+        console.log(misConsultas);
+        
 
         let areaConsulta =document.createElement("div");
         let consulta =document.createElement("h3");
@@ -62,7 +69,7 @@ async function mostrarDuda() {
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(comentario);
 
-            if (elementCon.estado === false && index === dudaRecibida.length - 1) {
+            if (elementCon.estado === false && index === misConsultas.length - 1) {
                 await Swal.fire('Nueva retroalimentación', 'El profesor respondió:' + elementCon.comentario, 'info');
             }
         }

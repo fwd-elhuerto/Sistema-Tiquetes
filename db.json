@@ -2,95 +2,71 @@
   "usuarios": [
     {
       "id": "1",
-      "usuario": "jlopez",
-      "password": "abc123",
+      "usuario": "Steven",
+      "password": "pass1234",
+      "telefono": "88887777",
+      "sede": "Puntarenas",
       "tipo": "profesor"
     },
     {
       "id": "2",
-      "usuario": "mcastro",
-      "password": "qwe789",
+      "usuario": "Barry",
+      "password": "fwd",
+      "telefono": "87451236",
+      "sede": "Puntarenas",
       "tipo": "profesor"
     },
     {
       "id": "3",
-      "usuario": "arivera",
-      "password": "zxc456",
+      "usuario": "Jean Carlos",
+      "password": "andres!99",
+      "telefono": "60543210",
+      "sede": "La capri",
+      "tipo": "profesor"
+    },
+    {
+      "id": "378e",
+      "usuario": "caleb",
+      "password": "1234",
+      "telefono": "62071398",
+      "sede": "Puntarenas",
+      "tipo": "estudiante"
+    },
+    {
+      "id": "9f54",
+      "usuario": "roger",
+      "password": "4444",
+      "telefono": "62071390",
+      "sede": "Puntarenas",
+      "tipo": "estudiante"
+    },
+    {
+      "id": "6c77",
+      "usuario": "",
+      "password": "",
+      "telefono": "",
+      "sede": "Puntarenas",
+      "tipo": "estudiante"
+    },
+    {
+      "id": "aa8f",
+      "usuario": "",
+      "password": "",
+      "telefono": "",
+      "sede": "Puntarenas",
       "tipo": "estudiante"
     }
   ],
   "consultas": [
     {
-      "id": "930b",
-      "consulta": "como le encuentro sentido a mi vida",
-      "fecha": "2025-08-28T16:12:51.443Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": "hola"
-    },
-    {
-      "id": "15e3",
-      "consulta": "hhj",
-      "fecha": "2025-08-28T16:20:43.807Z",
-      "estado": false,
-      "profesor": "Barry",
+      "id": "bea2",
+      "consulta": "como se usa el .filter",
+      "fecha": "2025-08-28T21:00:37.352Z",
+      "estado": true,
+      "profesor": "Steven",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
       "comentario": ""
-    },
-    {
-      "id": "1074",
-      "consulta": "sss",
-      "fecha": "2025-08-28T16:29:39.533Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": ""
-    },
-    {
-      "id": "5804",
-      "consulta": "gato",
-      "fecha": "2025-08-28T16:32:21.713Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": "hh"
-    },
-    {
-      "id": "654f",
-      "consulta": "jjjfh",
-      "fecha": "2025-08-28T16:36:00.839Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": "hola"
-    },
-    {
-      "id": "89e6",
-      "consulta": "como le encuentro sentido a mi vida",
-      "fecha": "2025-08-28T16:44:00.350Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": ""
-    },
-    {
-      "id": "d555",
-      "consulta": "fgrdhhhr",
-      "fecha": "2025-08-28T16:48:26.662Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": "trade"
-    },
-    {
-      "id": "76dc",
-      "consulta": "bbb",
-      "fecha": "2025-08-28T17:22:50.235Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": "hola"
-    },
-    {
-      "id": "8f4e",
-      "consulta": "hola",
-      "fecha": "2025-08-28T17:26:35.271Z",
-      "estado": false,
-      "profesor": "Barry",
-      "comentario": "hggh"
     }
   ]
 }

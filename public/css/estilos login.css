@@ -1,5 +1,5 @@
 body{
-    background-image: url(../imagenes/fondo\,profesor.jpg);
+    background-image: url(../imagenes/fondo\ 1.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -16,4 +16,12 @@ h1{
     display: grid;
     justify-content: center;
     
+}
+.BT{
+    background-color: transparent;
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 20px;
 }

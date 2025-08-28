@@ -3,6 +3,7 @@
 const UN =document.getElementById("UN")
 const UC =document.getElementById("UC")
 const btEntrar =document.getElementById("btEntrar")
+const btRegistrar =document.getElementById("btRegistrar")
 
 /* const  =document.getElementById("") */
 /* funcion llamada desde el servises */
@@ -18,11 +19,12 @@ btEntrar.addEventListener("click", async function(){
         const UDindex = UD[index];
         if (UN.value === UDindex.usuario && UC.value === UDindex.password) {
             usuarioValido = true;
+            sessionStorage.setItem("usuarioLogueado", UDindex.usuario); // se guarda el usuario logueado
 
             if (UDindex.tipo === "profesor") {
-                window.location.href = "mainProfe.html";
+                window.location.href = "../pages/mainProfe.html";
             } else if (UDindex.tipo === "estudiante") {
-                window.location.href = "mainEstudiante.html";
+                window.location.href = "../pages/mainEstudiante.html";
             }
             break;
         }
@@ -32,4 +34,8 @@ btEntrar.addEventListener("click", async function(){
         Swal.fire('Error al ingresar', 'Contraseña o usuario inválido', 'error');
     }
 
+})
+
+btRegistrar.addEventListener("click", function () {
+    window.location.href = "../pages/registro.html"
 })
