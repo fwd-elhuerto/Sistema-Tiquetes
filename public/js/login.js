@@ -26,15 +26,13 @@ btEntrar.addEventListener("click", async function(){
                 window.location.href = "mainEstudiante.html";
             }
             break;
-        }
-    }
-
-    if (!usuarioValido) {
+        } else if (!usuarioValido) {
         Swal.fire('Error al ingresar', 'Contraseña o usuario inválido', 'error');
-    }
+    }} 
 
 })
 
-btRegistrar.addEventListener("click",
-    window.location.href = "registro.html"
+btRegistrar.addEventListener("click", function(){
+    window.location.href = "../pages/registro.html"
+}    
 )

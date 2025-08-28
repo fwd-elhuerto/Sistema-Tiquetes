@@ -15,22 +15,21 @@ import { getUsuarios,postUsuarios } from "../services/servicesUsuarios.js"
 /* el boton para guardar los usuarios  */
 btRegistro.addEventListener("click", async function getUsuarios() {
     /* crear una constante que guarde las carateristicas de los usuario (un objeto) */
-    if (UN !="" && UC !="" && UT!="" ) {
+    if (UN.value!="" && UC.value!="" && UT.value!="" ) {
         const usuario= {
         usuario: UN.value,
         password: UC.value,
         telefono: UT.value,
         sede:SD.value
-    }
-    /* constante que llama la funcion para subir los usuarios */
-    const DUsuarios = await postUsuarios(usuario)
-    console.log(DUsuarios);
-    window.location.href = "login.html";
+        }
+        /* constante que llama la funcion para subir los usuarios */
+        const DUsuarios = await postUsuarios(usuario)
+        console.log(DUsuarios);
+        window.location.href = await "login.html";
         
     } else {
-        Swal.fire('Error al ingresar', 'Llene Todos Los Campos Solisitados', 'error');
-        
-    }
+        Swal.fire('Error al ingresar', 'Llene Todos Los Campos Solicitados', 'error');
+        }
     
 })
 
