@@ -4,29 +4,41 @@
       "id": 1,
       "usuario": "jlopez",
       "password": "abc123",
-      "tipo": "profesor"
+      "telefono": 85954334,
+      "tipo": "profesor",
+      "sede": ""
     },
     {
       "id": 2,
       "usuario": "mcastro",
       "password": "qwe789",
-      "tipo": "profesor"
+      "telefono": 87652334,
+      "tipo": "profesor",
+      "sede": ""
     },
     {
       "id": 3,
       "usuario": "arivera",
       "password": "zxc456",
-      "tipo": "profesor"
+      "telefono": 875092544,
+      "tipo": "profesor",
+      "sede": ""
     },
     {
       "id": 4,
       "usuario": "jlopessss",
       "password": "1234",
-      "tipo": "estudiante"
+      "telefono": 89092334,
+      "tipo": "estudiante",
+      "sede": ""
+    },
+    {
+      "id": "7fbd",
+      "usuario": "Roger",
+      "password": "4444",
+      "telefono": "86059216",
+      "sede": "Puntarenas"
     }
-    
   ],
-  "dudas": [
-    
-  ]
+  "dudas": []
 }
