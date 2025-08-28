@@ -55,6 +55,14 @@
       "telefono": "",
       "sede": "Puntarenas",
       "tipo": "estudiante"
+    },
+    {
+      "id": "26a4",
+      "usuario": "sergio",
+      "password": "123",
+      "telefono": "6152725",
+      "sede": "Puntarenas",
+      "tipo": "estudiante"
     }
   ],
   "consultas": [
@@ -67,6 +75,26 @@
       "usuario": "caleb",
       "sede": "Puntarenas",
       "comentario": ""
+    },
+    {
+      "id": "8a75",
+      "consulta": "como se usa el .filter",
+      "fecha": "2025-08-28T21:33:03.916Z",
+      "estado": true,
+      "profesor": "Barry",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "d64b",
+      "consulta": "como se usa el .filter",
+      "fecha": "2025-08-28T21:44:11.527Z",
+      "estado": false,
+      "profesor": "Steven",
+      "usuario": "sergio",
+      "sede": "Puntarenas",
+      "comentario": "gfj"
     }
   ]
 }
