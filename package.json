@@ -1,5 +1,5 @@
 {
-  "name": "plantillajsnode",
+  "name": "sistema-tiquetes",
   "version": "1.0.0",
   "main": "login.js",
   "scripts": {

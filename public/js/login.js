@@ -19,11 +19,12 @@ btEntrar.addEventListener("click", async function(){
         const UDindex = UD[index];
         if (UN.value === UDindex.usuario && UC.value === UDindex.password) {
             usuarioValido = true;
+            sessionStorage.setItem("usuarioLogueado", UDindex.usuario); // se guarda el usuario logueado
 
             if (UDindex.tipo === "profesor") {
-                window.location.href = "mainProfe.html";
+                window.location.href = "../pages/mainProfe.html";
             } else if (UDindex.tipo === "estudiante") {
-                window.location.href = "mainEstudiante.html";
+                window.location.href = "../pages/mainEstudiante.html";
             }
             break;
         } else if (!usuarioValido) {

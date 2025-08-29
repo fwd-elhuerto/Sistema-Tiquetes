@@ -20,12 +20,13 @@ btRegistro.addEventListener("click", async function getUsuarios() {
         usuario: UN.value,
         password: UC.value,
         telefono: UT.value,
-        sede:SD.value
-        }
-        /* constante que llama la funcion para subir los usuarios */
-        const DUsuarios = await postUsuarios(usuario)
-        console.log(DUsuarios);
-        window.location.href = await "login.html";
+        sede:SD.value,
+        tipo: "estudiante"
+    }
+    /* constante que llama la funcion para subir los usuarios */
+    const DUsuarios = await postUsuarios(usuario)
+    console.log(DUsuarios);
+    window.location.href = "login.html";
         
     } else {
         Swal.fire('Error al ingresar', 'Llene Todos Los Campos Solicitados', 'error');
