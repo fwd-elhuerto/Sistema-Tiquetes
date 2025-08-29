@@ -110,11 +110,11 @@
       "id": "34c8",
       "consulta": "gato",
       "fecha": "2025-08-29T16:12:25.507Z",
-      "estado": true,
+      "estado": false,
       "profesor": "Steven",
       "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "ff"
     },
     {
       "id": "ca0d",
@@ -135,6 +135,56 @@
       "usuario": "caleb",
       "sede": "Puntarenas",
       "comentario": "investigue"
+    },
+    {
+      "id": "67eb",
+      "consulta": "gato",
+      "fecha": "2025-08-29T20:35:32.739Z",
+      "estado": false,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "ugur"
+    },
+    {
+      "id": "bdac",
+      "consulta": "jukhdhcj",
+      "fecha": "2025-08-29T21:43:55.555Z",
+      "estado": false,
+      "profesor": "Steven",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "hola"
+    },
+    {
+      "id": "d9da",
+      "consulta": "Me estoy kgando",
+      "fecha": "2025-08-29T21:46:02.222Z",
+      "estado": true,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "6106",
+      "consulta": "ayudaaaaaaaa!",
+      "fecha": "2025-08-29T21:46:02.222Z",
+      "estado": true,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "7f8e",
+      "consulta": "ayudaaaaaaaa!",
+      "fecha": "2025-08-29T21:46:02.222Z",
+      "estado": true,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": ""
     }
   ]
 }
