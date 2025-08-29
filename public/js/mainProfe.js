@@ -1,10 +1,38 @@
 const histConsultas =document.getElementById("histConsultas")
 const activas =document.getElementById("activas");
+const btnModalProfe =document.getElementById("btnModalProfe")
+const modalProfe =document.getElementById("modalProfe")
+const UN =document.getElementById("UN")
+const UC =document.getElementById("UC")
+const UT =document.getElementById("UT")
+const correo =document.getElementById("correo")
+const btRegistro =document.getElementById("btRegistro")
 
 import { postUsuarios, getUsuarios } from "../services/servicesUsuarios.js"
 import { postConsultas, getConsultas, putConsultas } from "../services/servicesConsultas.js"
 const usuarioLogueado = sessionStorage.getItem("usuarioLogueado");
 
+btnModalProfe.addEventListener("click", function () {
+    modalProfe.showModal();
+})
+
+
+btRegistro.addEventListener("click", async function () {
+    if (UN.value!="" && UC.value!="" && UT.value!="" ) {
+        const usuario= {
+        usuario: UN.value,
+        password: UC.value,
+        telefono: UT.value,
+        correo:   correo.value,
+        tipo: "profesor"
+        }
+        await postUsuarios(usuario)
+        Swal.fire('Completado', 'Nuevo administrador agregado correctamente', 'success');
+        modalProfe.close()
+    }else {
+        Swal.fire('Error al ingresar', 'Llene Todos Los Campos Solicitados', 'error');
+        }  
+  })
 
 async function mostrarConsulta() {
     const dudaRecibida = await getConsultas();
@@ -23,7 +51,7 @@ async function mostrarConsulta() {
         let inputComentario = document.createElement("input");
         
 
-        usuario.textContent= elementCon.usuario;
+        usuario.textContent="Estudiante: " + " " + elementCon.usuario;
         consulta.textContent= elementCon.consulta;
         fecha.textContent ="Generada:" + " " + elementCon.fecha;
         sede.textContent ="Sede: " + " " + elementCon.sede;
@@ -52,9 +80,11 @@ async function mostrarConsulta() {
                 elementCon.comentario = inputComentario.value; // nuevo campo
                 await Swal.fire('Consulta atendida', 'Se agregó tu retroalimentación correctamente, estos comentarios son privados para cada estudiante', 'info');
                 await putConsultas(elementCon.id, elementCon); // actualizar en db.json
+                await mostrarConsulta();
                 
             }else{
                 await Swal.fire('Error al enviar', 'Ingrese un comentario', 'error');
+                atender.checked = false;
             }
         })
       }

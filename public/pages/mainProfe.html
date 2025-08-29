@@ -10,26 +10,32 @@
 
 <body>
     <h1>Consultas</h1>
+    
+
+<button id="btnModalProfe">Registrar administrador</button>
 
 
-    <br><br>
+    <br><br><br><br>
     <div class="container">
     <h2>En cola:</h2>
+    <br><br>
     <div id="activas" class="d-flex row">
 
     </div>
     </div>
     
-    <dialog>
+    <dialog id="modalProfe">
         <h1>Registro De Profesores</h1>
-    <!-- UN= Nombre de usuario/UC= contraseña de usuario -->
-    
-     <div id="registro">
+
         <label for="UN">Nombre de usuario</label><br>
         <input type="text" name="Nombre de usuario" id="UN"><br>
 
-        <label for="UC">contraseña</label><br>
+        <label for="UC">Contraseña</label><br>
         <input type="password" name="contraseña" id="UC"><br>
+
+        <label for="correo">Correo Electronico</label><br>
+        <input type="text" name="correo" id="correo"><br>
+
         <label for="UT">Numero De Telefono</label><br>
         <input type="number" name="Telefono" id="UT"><br>
 

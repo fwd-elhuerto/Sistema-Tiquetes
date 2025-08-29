@@ -5,7 +5,7 @@ const profesor =document.getElementById("profesor")
 const activas =document.getElementById("activas")
 
 import { postUsuarios, getUsuarios } from "../services/servicesUsuarios.js"
-import { postConsultas, getConsultas } from "../services/servicesConsultas.js"
+import { postConsultas, getConsultas, putConsultas, deleteConsultas } from "../services/servicesConsultas.js"
 const timestamp = Date.now();
 const fechaActual = new Date(timestamp);
 const usuarioEnSesion = sessionStorage.getItem("usuarioLogueado");
@@ -27,8 +27,9 @@ btnGuardar.addEventListener("click", async function () {
         sede: usuarioLogueado.sede,
         comentario: ""
     }
-     await Swal.fire('Consulta Enviada', 'Las consultas se atienden por orden de hora segun la cola del profesor', 'success');
-    const respuesta = await postConsultas(duda)
+    await Swal.fire('Consulta Enviada', 'Las consultas se atienden por orden de hora segun la cola del profesor', 'success');
+    const respuesta = await postConsultas(duda);
+    await mostrarDuda();
 
 } else{
     await Swal.fire('Error al guardar', 'Debe ingresar una tarea', 'error');
@@ -41,6 +42,8 @@ async function mostrarDuda() {
     activas.textContent = "";
     histConsultas.textContent = "";
     const misConsultas = dudaRecibida.filter(c => c.usuario === usuarioEnSesion);
+    let retroVistas = JSON.parse(localStorage.getItem("retroVistas")) || [];
+
     for (let index = 0; index < misConsultas.length; index++) {
         const elementCon = misConsultas[index];
         console.log(misConsultas);
@@ -51,17 +54,24 @@ async function mostrarDuda() {
         let fecha = document.createElement("p");
         let profe = document.createElement("p");
         let comentario = document.createElement("p");
+        let eliminar = document.createElement("button");
 
         consulta.textContent= elementCon.consulta
         fecha.textContent ="Generada:" + " " + elementCon.fecha
         profe.textContent ="Dirigida a:" + " " + elementCon.profesor
         comentario.textContent = "Comentarios privado: " + " " + elementCon.comentario
+        eliminar.textContent = "Eliminar";
+
+        eliminar.addEventListener("click", async function () {
+            await deleteConsultas(elementCon.id, elementCon)
+        })
 
         if (elementCon.estado === true) {
             activas.appendChild(areaConsulta)
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
+            areaConsulta.appendChild(eliminar)
         }else {
             histConsultas.appendChild(areaConsulta);
             areaConsulta.appendChild(consulta);
@@ -69,12 +79,13 @@ async function mostrarDuda() {
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(comentario);
 
-            if (elementCon.estado === false && index === misConsultas.length - 1) {
+            if (elementCon.comentario && !retroVistas.includes(elementCon.id)) {
                 await Swal.fire('Nueva retroalimentación', 'El profesor respondió:' + elementCon.comentario, 'info');
+                retroVistas.push(elementCon.id)
             }
         }
     }
-
+    localStorage.setItem("retroVistas", JSON.stringify(retroVistas));
 }
 mostrarDuda()
 
