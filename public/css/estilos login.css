@@ -23,7 +23,12 @@ h1{
     min-height: 80px;
     max-width: 80px;
     max-height: 80px;
-    border-radius: 20px;
+    border:transparent
+}
+#btRegistrar{
+    background-image: url(../imagenes/base.png);
+    background-position: center;
+    background-size: cover;
 }
 label{
     background-color: rgb(164, 31, 221);

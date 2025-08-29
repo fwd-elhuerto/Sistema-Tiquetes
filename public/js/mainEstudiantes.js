@@ -29,7 +29,7 @@ btnGuardar.addEventListener("click", async function () {
     }
      await Swal.fire('Consulta Enviada', 'Las consultas se atienden por orden de hora segun la cola del profesor', 'success');
     const respuesta = await postConsultas(duda)
-
+    
 } else{
     await Swal.fire('Error al guardar', 'Debe ingresar una tarea', 'error');
 }
@@ -62,13 +62,23 @@ async function mostrarDuda() {
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
+            areaConsulta.style.backgroundImage = "url('../imagenes/bg.png')"
+            areaConsulta.style.backgroundSize = "cover";
+            areaConsulta.style.backgroundPosition = "center";
+            areaConsulta.style.borderRadius = "20px";
+            areaConsulta.style.border = "2px solid black";
+
         }else {
             histConsultas.appendChild(areaConsulta);
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(comentario);
-
+            areaConsulta.style.backgroundImage = "url('../imagenes/bg.png')"
+            areaConsulta.style.backgroundSize = "cover";
+            areaConsulta.style.backgroundPosition = "center";
+            areaConsulta.style.borderRadius = "20px";
+            areaConsulta.style.border = "2px solid black";
             if (elementCon.estado === false && index === misConsultas.length - 1) {
                 await Swal.fire('Nueva retroalimentación', 'El profesor respondió:' + elementCon.comentario, 'info');
             }

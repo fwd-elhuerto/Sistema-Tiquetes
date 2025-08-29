@@ -8,4 +8,38 @@ header{
     border-radius: 20px;
     border: 1px solid rgb(0, 0, 0);
 }
+h3{
+    
+    font-size: larger;
+}
+p{
+    
+    font-size: large;
+}
+label{
+    background-color: rgb(164, 31, 221);
+    border-radius: 20px;
+    border: 1px solid black;
+    color: aliceblue;
+    text-align: center;
+}
+.container{
+    background-image: url(../imagenes/menu_bg_fx.png);
+    color: aliceblue;
+}
+#activas{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 20px;
+}
+#histConsultas{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 20px;
+}
 
+.BT{
+    background-color: transparent;
+    border:transparent ;
+    
+}

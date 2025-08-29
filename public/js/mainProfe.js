@@ -43,6 +43,11 @@ async function mostrarConsulta() {
             areaConsulta.appendChild(inputComentario);
             areaConsulta.appendChild(atender2);
             areaConsulta.appendChild(atender);
+            areaConsulta.style.backgroundImage = "url('../imagenes/bg.png')"
+            areaConsulta.style.backgroundSize = "cover";
+            areaConsulta.style.backgroundPosition = "center";
+            areaConsulta.style.borderRadius = "20px";
+            areaConsulta.style.border = "2px solid black";
             
         
 
