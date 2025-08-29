@@ -1,7 +1,5 @@
-body{
-    background-image: url(../imagenes/fondo-2-V2.jpg);
-    background-position: center;
-    background-size: cover;
+.all{
+background-color: beige;
 }
 header{
     background-color: darkviolet;

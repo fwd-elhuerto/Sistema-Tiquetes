@@ -62,9 +62,7 @@ async function mostrarDuda() {
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
-            areaConsulta.style.backgroundImage = "url('../imagenes/bg.png')"
-            areaConsulta.style.backgroundSize = "cover";
-            areaConsulta.style.backgroundPosition = "center";
+            areaConsulta.style.backgroundColor = " rgb(164, 31, 221)"
             areaConsulta.style.borderRadius = "20px";
             areaConsulta.style.border = "2px solid black";
 
@@ -74,9 +72,7 @@ async function mostrarDuda() {
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(comentario);
-            areaConsulta.style.backgroundImage = "url('../imagenes/bg.png')"
-            areaConsulta.style.backgroundSize = "cover";
-            areaConsulta.style.backgroundPosition = "center";
+            areaConsulta.style.backgroundColor = " rgb(164, 31, 221)"
             areaConsulta.style.borderRadius = "20px";
             areaConsulta.style.border = "2px solid black";
             if (elementCon.estado === false && index === misConsultas.length - 1) {

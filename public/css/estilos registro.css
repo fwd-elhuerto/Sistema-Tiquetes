@@ -1,7 +1,5 @@
-body{
-    background-image: url(../imagenes/fondo\ 1.jpg);
-    background-position: center;
-    background-size: cover;
+.all{
+background-color: beige;
 }
 h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

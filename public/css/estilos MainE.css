@@ -1,7 +1,5 @@
-body{
-    background-image: url(../imagenes/fondo-2-V2.jpg);
-    background-position: center;
-    background-size: cover;
+.all{
+background-color: beige;
 }
 header{
     background-color: darkviolet;
@@ -9,12 +7,12 @@ header{
     border: 1px solid rgb(0, 0, 0);
 }
 h3{
-    
     font-size: larger;
+    color: aqua;
 }
 p{
-    
     font-size: large;
+    
 }
 label{
     background-color: rgb(164, 31, 221);
@@ -25,7 +23,7 @@ label{
 }
 .container{
     background-image: url(../imagenes/menu_bg_fx.png);
-    color: aliceblue;
+    /* color: aliceblue; */
 }
 #activas{
     display: grid;
