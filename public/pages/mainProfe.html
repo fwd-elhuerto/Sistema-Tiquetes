@@ -14,6 +14,7 @@
 
 <button id="btnModalProfe">Registrar administrador</button>
 <button id="btnModalHistorial">Historial de consultas</button>
+<button id="btnModalFrecuencia">Frencuencia de consultas</button>
 
 
 
@@ -48,11 +49,20 @@
 
     <dialog id="historial">
         <h3>Consultas atendidas</h3><br>
+        <input id="busqueda" type="search" placeholder="Buscar por estudiante o consulta">
+        <button id="buscar">Buscar</button>
         <div id="hisAtendidas"></div>
         <br><br>
+        <button id="btnOkHist">OK</button>
 
+
+    </dialog>
+        
+    <dialog id="frecuencia">
         <h3>Frecuencia de consultas</h3><br>
-        <div id="frecuencia"></div>
+        <div id="divFrecuencia"></div>
+        <br><br>
+        <button id="btnOkFre">OK</button>
     </dialog>
 
     

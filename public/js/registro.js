@@ -16,6 +16,15 @@ import { getUsuarios,postUsuarios } from "../services/servicesUsuarios.js"
 btRegistro.addEventListener("click", async function getUsuarios() {
     /* crear una constante que guarde las carateristicas de los usuario (un objeto) */
     if (UN.value!="" && UC.value!="" && UT.value!="" ) {
+        const usuariosExistentes = await getUsuarios(); // linea que agrego caleb guaradr
+        const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value); // linea que agrego caleb guaradr
+
+    if (usuarioExistente) {// linea que agrego caleb guaradr
+        Swal.fire('Error', 'El nombre de usuario ya está registrado. Elige otro.', 'error');
+        return;
+    }// linea que agrego caleb guaradr
+
+
         const usuario= {
         usuario: UN.value,
         password: UC.value,

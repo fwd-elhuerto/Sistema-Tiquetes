@@ -3,6 +3,9 @@ const btnGuardar =document.getElementById("btnGuardar")
 const histConsultas =document.getElementById("histConsultas")
 const profesor =document.getElementById("profesor")
 const activas =document.getElementById("activas")
+const busqueda =document.getElementById("busqueda")
+const buscar =document.getElementById("buscar")
+
 
 import { postUsuarios, getUsuarios } from "../services/servicesUsuarios.js"
 import { postConsultas, getConsultas, putConsultas, deleteConsultas } from "../services/servicesConsultas.js"
@@ -13,7 +16,10 @@ const traerUsuarios = await getUsuarios();
 const usuarioLogueado = traerUsuarios.find(u => u.usuario === usuarioEnSesion);
 console.log(usuarioLogueado);
 
-
+// Eventos de botones
+buscar.addEventListener("click", function () {
+    buscarConsultas()
+})
 
 btnGuardar.addEventListener("click", async function () {
    if (nuevaconsulta.value.trim() != "") {
@@ -36,9 +42,18 @@ btnGuardar.addEventListener("click", async function () {
 }
 })
 
-
-async function mostrarDuda() {
+// Funciones
+async function buscarConsultas() {
     const dudaRecibida = await getConsultas();
+    let search =dudaRecibida.filter(filtroNommbre => filtroNommbre.consulta.toLowerCase().includes(busqueda.value.toLowerCase()) )
+    // .filter para buscar valores en la lista, .toLowerCase para que no afecte la mayúscula
+    histConsultas.textContent = "";
+    mostrarDuda(search)
+}
+
+
+async function mostrarDuda(lista = null) {
+    const dudaRecibida = lista || await getConsultas();
     activas.textContent = "";
     histConsultas.textContent = "";
     const misConsultas = dudaRecibida.filter(c => c.usuario === usuarioEnSesion);
@@ -57,13 +72,15 @@ async function mostrarDuda() {
         let eliminar = document.createElement("button");
 
         consulta.textContent= elementCon.consulta
-        fecha.textContent ="Generada:" + " " + elementCon.fecha
+        const fechaFormateada = new Date(elementCon.fecha).toLocaleString(); // fecha en formato normal
+        fecha.textContent = "Generada: " + fechaFormateada;
         profe.textContent ="Dirigida a:" + " " + elementCon.profesor
         comentario.textContent = "Comentarios privado: " + " " + elementCon.comentario
         eliminar.textContent = "Eliminar";
 
         eliminar.addEventListener("click", async function () {
             await deleteConsultas(elementCon.id, elementCon)
+            await mostrarDuda(); // mostrar sin actualizar 
         })
 
         if (elementCon.estado === true) {

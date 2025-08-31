@@ -185,6 +185,26 @@
       "usuario": "caleb",
       "sede": "Puntarenas",
       "comentario": ""
+    },
+    {
+      "id": "d06c",
+      "consulta": "como le encuentro sentido a mi vida",
+      "fecha": "2025-08-31T20:06:12.633Z",
+      "estado": false,
+      "profesor": "Jean Carlos",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "busquelo"
+    },
+    {
+      "id": "a565",
+      "consulta": "gato",
+      "fecha": "2025-08-31T20:11:38.013Z",
+      "estado": false,
+      "profesor": "Jean Carlos",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "gata"
     }
   ]
 }
