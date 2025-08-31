@@ -40,8 +40,9 @@ btnModalHistorial.addEventListener("click", function () {// mostrar modal de his
     modalHistorial.showModal();
 })
 
-btnModalFrecuencia.addEventListener("click", function () { // mostrar modal de frecuentes
+btnModalFrecuencia.addEventListener("click", async function () { // mostrar modal de frecuentes
     frecuencia.showModal();
+    await mostrarFrecuencia()
 })
 
 btnOkHist.addEventListener("click", async function () { // cerrar modal historial
@@ -155,3 +156,47 @@ async function mostrarConsulta(lista = null) {
 
 }
 mostrarConsulta()
+
+async function mostrarFrecuencia() {
+    const consultas = await getConsultas();
+
+    const contador = {}; // objeto para guardar la cantidad de consultas por estudiante
+
+    for (let i = 0; i < consultas.length; i++) { // recorrer consultas
+        const elementCon = consultas[i];
+
+        if (elementCon.profesor === usuarioLogueado) { // filtrar consultas solo del profe logueado
+            if (contador[elementCon.usuario]) {
+                // Si existe, sumamos 1
+                contador[elementCon.usuario] += 1;
+            } else {
+                // Si no existe, la inicia en 1
+                contador[elementCon.usuario] = 1;
+            }
+        }
+    }
+
+    // convertir en lista
+    const listaOrdenada = [];
+    for (let usuario in contador) {
+        listaOrdenada.push({ usuario: usuario, cantidad: contador[usuario] });// pushear a la lista vacia
+    }
+
+    listaOrdenada.sort(function(a, b) { // ordenar de mayor a menor
+        return b.cantidad - a.cantidad;
+    });
+
+    divFrecuencia.textContent = ""; // limpiar contenedor
+
+    if (listaOrdenada.length === 0) {
+        const mensaje = document.createElement("p");
+        mensaje.textContent = "No hay consultas registradas aún.";
+        divFrecuencia.appendChild(mensaje);
+    } else { 
+        for (let j = 0; j < listaOrdenada.length; j++) {
+        const frencuentes = document.createElement("p"); 
+        frencuentes.textContent = listaOrdenada[j].usuario + ": " + listaOrdenada[j].cantidad + " consultas";
+        divFrecuencia.appendChild(frencuentes);
+        }
+    }
+}
