@@ -17,11 +17,7 @@ h1{
 }
 .BT{
     background-color: transparent;
-    min-width: 80px;
-    min-height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 20px;
+    border:transparent ; 
 }
 label{
     background-color: rgb(164, 31, 221);

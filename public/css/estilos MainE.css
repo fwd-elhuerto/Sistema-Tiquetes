@@ -8,11 +8,9 @@ header{
 }
 h3{
     font-size: larger;
-    color: aqua;
 }
 p{
     font-size: large;
-    
 }
 label{
     background-color: rgb(164, 31, 221);
@@ -23,7 +21,8 @@ label{
 }
 .container{
     background-image: url(../imagenes/menu_bg_fx.png);
-    /* color: aliceblue; */
+    border-radius: 20px;
+    color: aliceblue;
 }
 #activas{
     display: grid;
@@ -38,6 +37,5 @@ label{
 
 .BT{
     background-color: transparent;
-    border:transparent ;
-    
+    border:transparent ; 
 }

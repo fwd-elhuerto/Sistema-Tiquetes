@@ -47,7 +47,7 @@ async function deleteConsultas (id) {
     
     try {
         
-        const response =await fetch("http://localhost:3001/Consultas/"+ id,{
+        const response =await fetch("http://localhost:3001/consultas/"+ id,{
         method:'DELETE',
         headers : {
             'Content-Type': 'application/json'

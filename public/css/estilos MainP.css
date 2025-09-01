@@ -7,15 +7,13 @@ header{
     border: 1px solid rgb(0, 0, 0);
 }
 h3{
-    
     font-size: larger;
 }
 p{
-    
     font-size: large;
 }
 label{
-    background-color: rgb(164, 31, 221);
+    background-color: rgb(58, 25, 207);
     border-radius: 20px;
     border: 1px solid black;
     color: aliceblue;
@@ -24,9 +22,18 @@ label{
 .container{
     background-image: url(../imagenes/menu_bg_fx.png);
     color: aliceblue;
+    border-radius: 20px;
 }
 #activas{
     display: grid;
     grid-template-columns: repeat(3,auto);
     gap: 20px;
+}
+#areaBT{
+    display: flex;
+    right: 0;
+}
+.BT{
+    border-radius: 20px;
+    border: 1px solid black;
 }

@@ -5,7 +5,6 @@ const UC =document.getElementById("UC")
 const btEntrar =document.getElementById("btEntrar")
 const btRegistrar =document.getElementById("btRegistrar")
 
-/* const  =document.getElementById("") */
 /* funcion llamada desde el servises */
 import { getUsuarios } from "../services/servicesUsuarios.js"
 
