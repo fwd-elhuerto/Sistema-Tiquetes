@@ -1,3 +1,4 @@
+// elementos del dom
 const nuevaconsulta =document.getElementById("consulta")
 const btnGuardar =document.getElementById("btnGuardar")
 const histConsultas =document.getElementById("histConsultas")
@@ -5,15 +6,18 @@ const profesor =document.getElementById("profesor")
 const activas =document.getElementById("activas")
 const busqueda =document.getElementById("busqueda")
 const buscar =document.getElementById("buscar")
+const welcome =document.getElementById("welcome")
 
-
+//imports
 import { postUsuarios, getUsuarios } from "../services/servicesUsuarios.js"
 import { postConsultas, getConsultas, putConsultas, deleteConsultas } from "../services/servicesConsultas.js"
-const timestamp = Date.now();
+
+//constantes
+const timestamp = Date.now(); //fecha en segundos
 const fechaActual = new Date(timestamp);
-const usuarioEnSesion = sessionStorage.getItem("usuarioLogueado");
-const traerUsuarios = await getUsuarios();
-const usuarioLogueado = traerUsuarios.find(u => u.usuario === usuarioEnSesion);
+const usuarioEnSesion = sessionStorage.getItem("usuarioLogueado"); // se trae de sessionStorage el usuario actual
+const traerUsuarios = await getUsuarios(); // traer usuarios
+const usuarioLogueado = traerUsuarios.find(u => u.usuario === usuarioEnSesion); // se busca el usuario actual en el db.json
 console.log(usuarioLogueado);
 
 // Eventos de botones
@@ -22,20 +26,21 @@ buscar.addEventListener("click", function () {
 })
 
 btnGuardar.addEventListener("click", async function () {
-   if (nuevaconsulta.value.trim() != "") {
+   if (nuevaconsulta.value.trim() != "") { // validacion de espacios vacios
     
     const duda={ 
         consulta: nuevaconsulta.value,
         fecha: fechaActual,
-        estado: true,
+        estado: true, // el estdo true es para las consultas sin resolver
         profesor: profesor.value,
         usuario: usuarioLogueado.usuario,
         sede: usuarioLogueado.sede,
-        comentario: ""
-    }
+        comentario: "" 
+    } // se guarda la consulta
     await Swal.fire('Consulta Enviada', 'Las consultas se atienden por orden de hora segun la cola del profesor', 'success');
-    const respuesta = await postConsultas(duda);
-    await mostrarDuda();
+    const respuesta = await postConsultas(duda); // se sube la consulta al db.json
+    nuevaconsulta.value= "";
+    await mostrarDuda(); // se actualiza la pantalla
     
 } else{
     await Swal.fire('Error al guardar', 'Debe ingresar una tarea', 'error');
@@ -48,18 +53,18 @@ async function buscarConsultas() {
     let search =dudaRecibida.filter(filtroNommbre => filtroNommbre.consulta.toLowerCase().includes(busqueda.value.toLowerCase()) )
     // .filter para buscar valores en la lista, .toLowerCase para que no afecte la mayúscula
     histConsultas.textContent = "";
-    mostrarDuda(search)
+    mostrarDuda(search) // se llama la funcion con la lista filtrada como parametro
 }
 
 
-async function mostrarDuda(lista = null) {
-    const dudaRecibida = lista || await getConsultas();
-    activas.textContent = "";
+async function mostrarDuda(lista = null) { // lista igual null para usarla con una lista o sin ella
+    const dudaRecibida = lista || await getConsultas(); // si no tiene parametro llama la lista del db.json
+    activas.textContent = ""; // vacia el contenedor
     histConsultas.textContent = "";
-    const misConsultas = dudaRecibida.filter(c => c.usuario === usuarioEnSesion);
-    let retroVistas = JSON.parse(localStorage.getItem("retroVistas")) || [];
+    const misConsultas = dudaRecibida.filter(c => c.usuario === usuarioEnSesion); // .filter para ver solo las tareas del usuario logueado
+    let retroVistas = JSON.parse(localStorage.getItem("retroVistas")) || []; 
 
-    for (let index = 0; index < misConsultas.length; index++) {
+    for (let index = 0; index < misConsultas.length; index++) { // se recorre la lista filtrada
         const elementCon = misConsultas[index];
         console.log(misConsultas);
         
@@ -77,13 +82,14 @@ async function mostrarDuda(lista = null) {
         profe.textContent ="Dirigida a:" + " " + elementCon.profesor
         comentario.textContent = "Comentarios privado: " + " " + elementCon.comentario
         eliminar.textContent = "Eliminar";
+        welcome.textContent = "Bienvenido " + usuarioLogueado.usuario
 
         eliminar.addEventListener("click", async function () {
             await deleteConsultas(elementCon.id, elementCon)
-            await mostrarDuda(); // mostrar sin actualizar 
+            await mostrarDuda(); // actualizar pantalla
         })
 
-        if (elementCon.estado === true) {
+        if (elementCon.estado === true) { // si la consulta esta pendiente:
             activas.appendChild(areaConsulta)
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
@@ -95,7 +101,7 @@ async function mostrarDuda(lista = null) {
             areaConsulta.style.borderRadius = "20px";
             areaConsulta.style.border = "2px solid black";
 
-        }else {
+        }else { // si no esta pendiente:
             histConsultas.appendChild(areaConsulta);
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
@@ -107,13 +113,15 @@ async function mostrarDuda(lista = null) {
             areaConsulta.style.borderRadius = "20px";
             areaConsulta.style.border = "2px solid black";
 
-            if (elementCon.comentario && !retroVistas.includes(elementCon.id)) {
+            if (elementCon.comentario && !retroVistas.includes(elementCon.id)) { // verifica si la consulta ya tiene comentario
                 await Swal.fire('Nueva retroalimentación', 'El profesor respondió:' + elementCon.comentario, 'info');
-                retroVistas.push(elementCon.id)
+                retroVistas.push(elementCon.id) // se pushea el id a la lista del localstorage
+                console.log(retroVistas);
+                
             }
         }
     }
-    localStorage.setItem("retroVistas", JSON.stringify(retroVistas));
+    localStorage.setItem("retroVistas", JSON.stringify(retroVistas)); // se actualiza la lista local
 }
 mostrarDuda()
 

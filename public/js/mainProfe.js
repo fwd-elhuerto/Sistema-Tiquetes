@@ -18,6 +18,7 @@ const divFrecuencia =document.getElementById("divFrecuencia")
 const btnOkFre =document.getElementById("btnOkFre")
 const busqueda =document.getElementById("busqueda")
 const buscar =document.getElementById("buscar")
+const welcome =document.getElementById("welcome")
 
 
 // Import
@@ -117,6 +118,7 @@ async function mostrarConsulta(lista = null) {
         atender2.textContent = "Marcar como atendido"
         inputComentario.type = "text";
         inputComentario.placeholder = "Retroalimentación..."
+        welcome.textContent = "Bienvenido " + usuarioLogueado
        
        if (elementCon.profesor === usuarioLogueado && elementCon.estado === true) {
             activas.appendChild(areaConsulta);
