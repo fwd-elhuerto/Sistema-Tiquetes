@@ -7,6 +7,7 @@ const activas =document.getElementById("activas")
 const busqueda =document.getElementById("busqueda")
 const buscar =document.getElementById("buscar")
 const welcome =document.getElementById("welcome")
+const btnSalir = document.getElementById("btnSalir")
 
 //imports
 import { postUsuarios, getUsuarios } from "../services/servicesUsuarios.js"
@@ -23,6 +24,12 @@ console.log(usuarioLogueado);
 // Eventos de botones
 buscar.addEventListener("click", function () {
     buscarConsultas()
+})
+
+btnSalir.addEventListener("click", function(){
+    sessionStorage.clear()
+    window.location.href = "../pages/login.html"
+   
 })
 
 btnGuardar.addEventListener("click", async function () {
@@ -85,8 +92,21 @@ async function mostrarDuda(lista = null) { // lista igual null para usarla con u
         welcome.textContent = "Bienvenido " + usuarioLogueado.usuario
 
         eliminar.addEventListener("click", async function () {
-            await deleteConsultas(elementCon.id, elementCon)
-            await mostrarDuda(); // actualizar pantalla
+           const result = await Swal.fire({
+                title: '¿Estás seguro?',
+                text: "Esta consulta se eliminará de forma permanente",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33', 
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            });
+            if (result.isConfirmed) {
+                await deleteConsultas(elementCon.id, elementCon);
+                await Swal.fire('Eliminada', 'La consulta ha sido eliminada.', 'success');
+                mostrarDuda(); // refrescar la lista después de borrar
+            }
         })
 
         if (elementCon.estado === true) { // si la consulta esta pendiente:
@@ -95,9 +115,7 @@ async function mostrarDuda(lista = null) { // lista igual null para usarla con u
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(eliminar);
-            areaConsulta.style.backgroundImage= "url(../imagenes/fondotiquete.png)";
-            areaConsulta.style.backgroundSize= "cover";
-            areaConsulta.style.backgroundPosition= "center";
+            areaConsulta.style.backgroundColor = "black"
             areaConsulta.style.borderRadius = "20px";
             areaConsulta.style.border = "2px solid black";
 
@@ -107,9 +125,7 @@ async function mostrarDuda(lista = null) { // lista igual null para usarla con u
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(comentario);
-            areaConsulta.style.backgroundImage= "url(../imagenes/fondotiquete.png)";
-            areaConsulta.style.backgroundSize= "cover";
-            areaConsulta.style.backgroundPosition= "center"; 
+            areaConsulta.style.backgroundColor = "black"
             areaConsulta.style.borderRadius = "20px";
             areaConsulta.style.border = "2px solid black";
 

@@ -13,9 +13,9 @@ import { getUsuarios,postUsuarios } from "../services/servicesUsuarios.js"
 
 
 /* el boton para guardar los usuarios  */
-btRegistro.addEventListener("click", async function getUsuarios() {
+btRegistro.addEventListener("click", async function () {
     /* crear una constante que guarde las carateristicas de los usuario (un objeto) */
-    if (UN.value!="" && UC.value!="" && UT.value!="" ) {
+   if (UN.value != "" && UT.value != "" && UC.value.length > 8)  {
         const usuariosExistentes = await getUsuarios(); // linea que agrego caleb guaradr
         const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value); // linea que agrego caleb guaradr
 

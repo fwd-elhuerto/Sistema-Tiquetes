@@ -14,6 +14,15 @@ h3{
 p{
     font-size: large;
 }
+
+.lbSalir{
+    background-color: rgb(222, 218, 240);
+    border-radius: 20px;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
 label{
     background-color: rgb(164, 31, 221);
     border-radius: 20px;
@@ -41,7 +50,12 @@ label{
     background-color: transparent;
     border:transparent ; 
 }
-
+#cerrarS{
+    right: 0%;
+    top: 0%;
+    float: right;
+    
+}
 @media only screen and (max-width: 1000px){
 #activas{
     display: grid;

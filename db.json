@@ -63,6 +63,30 @@
       "telefono": "868642836",
       "correo": "elena@gmail.com",
       "tipo": "profesor"
+    },
+    {
+      "id": "4684",
+      "usuario": "TAVO",
+      "password": "4",
+      "telefono": "45456546",
+      "correo": "YYYYYYY",
+      "tipo": "profesor"
+    },
+    {
+      "id": "65cc",
+      "usuario": "fio",
+      "password": "6476476486",
+      "telefono": "56478576",
+      "sede": "Puntarenas",
+      "tipo": "estudiante"
+    },
+    {
+      "id": "a4ad",
+      "usuario": "nora",
+      "password": "123456789",
+      "telefono": "53898438953",
+      "sede": "Puntarenas",
+      "tipo": "estudiante"
     }
   ],
   "consultas": [
@@ -70,21 +94,21 @@
       "id": "43e1",
       "consulta": "como se usa el map",
       "fecha": "2025-09-01T19:05:37.755Z",
-      "estado": true,
+      "estado": false,
       "profesor": "Steven",
       "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "KWJFAKEUHGFZRSKG"
     },
     {
-      "id": "0475",
-      "consulta": "como usar el reduce",
-      "fecha": "2025-09-01T19:08:34.749Z",
-      "estado": true,
-      "profesor": "Barry",
+      "id": "a1fc",
+      "consulta": "holaaaaaaaaa",
+      "fecha": "2025-09-01T21:45:08.235Z",
+      "estado": false,
+      "profesor": "Steven",
       "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "no moleste"
     }
   ]
 }

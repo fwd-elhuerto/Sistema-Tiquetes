@@ -19,6 +19,7 @@ const btnOkFre =document.getElementById("btnOkFre")
 const busqueda =document.getElementById("busqueda")
 const buscar =document.getElementById("buscar")
 const welcome =document.getElementById("welcome")
+const btnSalir = document.getElementById("btnSalir")
 
 
 // Import
@@ -31,6 +32,12 @@ const usuarioLogueado = sessionStorage.getItem("usuarioLogueado");
 // Eventos de botones
 buscar.addEventListener("click", function () {
     buscarConsultas()
+})
+
+btnSalir.addEventListener("click", function(){
+    sessionStorage.clear()
+    window.location.href = "../pages/login.html"
+   
 })
 
 btnModalProfe.addEventListener("click", function () {// mostrar modal de registro de administardor
@@ -130,9 +137,7 @@ async function mostrarConsulta(lista = null) {
             areaConsulta.appendChild(inputComentario);
             areaConsulta.appendChild(atender2);
             areaConsulta.appendChild(atender);
-            areaConsulta.style.backgroundImage = "url('../imagenes/fondotiquete.png')"
-            areaConsulta.style.backgroundSize = "cover";
-            areaConsulta.style.backgroundPosition = "center";
+            areaConsulta.style.backgroundColor = "black"
             areaConsulta.style.borderRadius = "20px";
             areaConsulta.style.border = "2px solid black";
             
@@ -160,9 +165,7 @@ async function mostrarConsulta(lista = null) {
                 areaConsulta.appendChild(sede);
                 areaConsulta.appendChild(profe);
                 areaConsulta.appendChild(comentario)
-                areaConsulta.style.backgroundImage= "url(../imagenes/fondotiquete.png)"
-                areaConsulta.style.backgroundSize= "cover"
-                areaConsulta.style.backgroundPosition= "center" 
+                areaConsulta.style.backgroundColor = "black" 
                 areaConsulta.style.borderRadius = "20px";
                 areaConsulta.style.border = "2px solid black";
                 }
