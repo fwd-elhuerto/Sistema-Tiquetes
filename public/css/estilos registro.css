@@ -26,3 +26,17 @@ label{
     color: aliceblue;
     text-align: center;
 }
+
+.ft{
+    background-color: rgb(109, 118, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    text-align: center;
+    gap: 20px;
+    position: fixed;   
+    bottom: 0;         
+    left: 0;
+    width: 100%; 
+    height: 100px; 
+}

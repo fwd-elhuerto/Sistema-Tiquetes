@@ -54,13 +54,13 @@ btnOkFre.addEventListener("click", async function () { // cerrar modal frencuent
 })
 
 btRegistro.addEventListener("click", async function () {
-    if (UN.value!="" && UC.value!="" && UT.value!="" ) {
+    if (UN.value!="" && UC.value!="" && UT.value!="" ) { // validacion para espacios vacios
         const usuariosExistentes = await getUsuarios();
-        const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value);
+        const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value); // validacion para usuario registrado
         if (usuarioExistente) {
             Swal.fire('Error', 'El nombre de usuario ya está registrado. Elige otro.', 'error');
             await modalProfe.close()
-            return;
+            return; // return para que no registre apesar del error
         }
 
         const usuario= {
@@ -68,9 +68,9 @@ btRegistro.addEventListener("click", async function () {
         password: UC.value,
         telefono: UT.value,
         correo:   correo.value,
-        tipo: "profesor"
+        tipo: "profesor" // se crea el usuario como admin por defecto
         }
-        await postUsuarios(usuario)
+        await postUsuarios(usuario) // se actualiza el db json
         Swal.fire('Completado', 'Nuevo administrador agregado correctamente', 'success');
         modalProfe.close()
     }else {
@@ -81,7 +81,7 @@ btRegistro.addEventListener("click", async function () {
 
   // Funciones
 async function buscarConsultas() {
-    const dudaRecibida = await getConsultas();
+    const dudaRecibida = await getConsultas(); // 
     let search =dudaRecibida.filter(filtroNommbre => filtroNommbre.usuario.toLowerCase().includes(busqueda.value.toLowerCase()) || filtroNommbre.consulta.toLowerCase().includes(busqueda.value.toLowerCase()) )
     // .filter para buscar valores en la lista, .toLowerCase para que no afecte la mayúscula
     hisAtendidas.textContent = "";

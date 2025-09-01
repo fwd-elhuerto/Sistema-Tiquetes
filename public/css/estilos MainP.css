@@ -37,3 +37,14 @@ label{
     border-radius: 20px;
     border: 1px solid black;
 }
+
+.ft{
+    background-color: rgb(109, 118, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    height: 100px;
+    margin-top: auto; 
+}

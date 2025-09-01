@@ -1,5 +1,7 @@
 .all{
 background-color: beige;
+margin: 0;
+  padding: 0;
 }
 header{
     background-color: darkviolet;
@@ -38,4 +40,16 @@ label{
 .BT{
     background-color: transparent;
     border:transparent ; 
+}
+
+
+.ft{
+    background-color: rgb(109, 118, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    height: 100px;
+    margin-top: auto; 
 }
