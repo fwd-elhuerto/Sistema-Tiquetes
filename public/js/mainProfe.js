@@ -128,7 +128,14 @@ async function mostrarConsulta(lista = null) {
             areaConsulta.appendChild(inputComentario);
             areaConsulta.appendChild(atender2);
             areaConsulta.appendChild(atender);
-    
+            areaConsulta.style.backgroundImage = "url('../imagenes/fondotiquete.png')"
+            areaConsulta.style.backgroundSize = "cover";
+            areaConsulta.style.backgroundPosition = "center";
+            areaConsulta.style.borderRadius = "20px";
+            areaConsulta.style.border = "2px solid black";
+            
+        
+
         atender.addEventListener("change", async function () {
             if (atender.checked && inputComentario.value.trim() != "") { // validar espacios vacios y check
                 elementCon.estado = false; // marcar como atendida
@@ -142,7 +149,8 @@ async function mostrarConsulta(lista = null) {
                 atender.checked = false;
             }
         })
-      } else if (elementCon.profesor === usuarioLogueado && elementCon.estado === false) {
+
+        } else if (elementCon.profesor === usuarioLogueado && elementCon.estado === false) {
                 hisAtendidas.appendChild(areaConsulta)
                 areaConsulta.appendChild(usuario);
                 areaConsulta.appendChild(consulta);
@@ -150,7 +158,11 @@ async function mostrarConsulta(lista = null) {
                 areaConsulta.appendChild(sede);
                 areaConsulta.appendChild(profe);
                 areaConsulta.appendChild(comentario)
-                
+                areaConsulta.style.backgroundImage= "url(../imagenes/fondotiquete.png)"
+                areaConsulta.style.backgroundSize= "cover"
+                areaConsulta.style.backgroundPosition= "center" 
+                areaConsulta.style.borderRadius = "20px";
+                areaConsulta.style.border = "2px solid black";
                 }
     }
 

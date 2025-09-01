@@ -36,7 +36,7 @@ btnGuardar.addEventListener("click", async function () {
     await Swal.fire('Consulta Enviada', 'Las consultas se atienden por orden de hora segun la cola del profesor', 'success');
     const respuesta = await postConsultas(duda);
     await mostrarDuda();
-
+    
 } else{
     await Swal.fire('Error al guardar', 'Debe ingresar una tarea', 'error');
 }
@@ -89,12 +89,23 @@ async function mostrarDuda(lista = null) {
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(eliminar)
+            areaConsulta.style.backgroundImage= "url(../imagenes/fondotiquete.png)"
+            areaConsulta.style.backgroundSize= "cover"
+            areaConsulta.style.backgroundPosition= "center" 
+            areaConsulta.style.borderRadius = "20px";
+            areaConsulta.style.border = "2px solid black";
+
         }else {
             histConsultas.appendChild(areaConsulta);
             areaConsulta.appendChild(consulta);
             areaConsulta.appendChild(fecha);
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(comentario);
+            areaConsulta.style.backgroundImage= "url(../imagenes/fondotiquete.png)"
+            areaConsulta.style.backgroundSize= "cover"
+            areaConsulta.style.backgroundPosition= "center" 
+            areaConsulta.style.borderRadius = "20px";
+            areaConsulta.style.border = "2px solid black";
 
             if (elementCon.comentario && !retroVistas.includes(elementCon.id)) {
                 await Swal.fire('Nueva retroalimentación', 'El profesor respondió:' + elementCon.comentario, 'info');

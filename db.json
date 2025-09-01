@@ -160,31 +160,31 @@
       "id": "d9da",
       "consulta": "Me estoy kgando",
       "fecha": "2025-08-29T21:46:02.222Z",
-      "estado": true,
+      "estado": false,
       "profesor": "Barry",
       "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "q"
     },
     {
       "id": "6106",
       "consulta": "ayudaaaaaaaa!",
       "fecha": "2025-08-29T21:46:02.222Z",
-      "estado": true,
+      "estado": false,
       "profesor": "Barry",
       "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "w"
     },
     {
       "id": "7f8e",
       "consulta": "ayudaaaaaaaa!",
       "fecha": "2025-08-29T21:46:02.222Z",
-      "estado": true,
+      "estado": false,
       "profesor": "Barry",
       "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "e"
     },
     {
       "id": "d06c",
@@ -205,6 +205,36 @@
       "usuario": "caleb",
       "sede": "Puntarenas",
       "comentario": "gata"
+    },
+    {
+      "id": "1495",
+      "consulta": "cacacacacacacaca",
+      "fecha": "2025-09-01T15:08:13.634Z",
+      "estado": false,
+      "profesor": "Barry",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": "r"
+    },
+    {
+      "id": "bc2a",
+      "consulta": "sololisssss",
+      "fecha": "2025-09-01T15:08:13.634Z",
+      "estado": false,
+      "profesor": "Barry",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": "t"
+    },
+    {
+      "id": "0db3",
+      "consulta": "pan",
+      "fecha": "2025-09-01T15:08:13.634Z",
+      "estado": false,
+      "profesor": "Barry",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": "y"
     }
   ]
 }
