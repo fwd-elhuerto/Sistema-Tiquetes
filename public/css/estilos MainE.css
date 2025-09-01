@@ -39,3 +39,17 @@ label{
     background-color: transparent;
     border:transparent ; 
 }
+
+@media only screen and (max-width: 1000px){
+#activas{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 20px;
+}
+#histConsultas{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 20px;
+}  
+}
+    
