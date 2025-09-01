@@ -33,10 +33,27 @@ label{
     display: flex;
     right: 0;
 }
+#modalProfe{
+    border-radius: 20px;
+    border: 1px solid black;
+}
 .BT{
     border-radius: 20px;
     border: 1px solid black;
 }
+#btRegistro{
+    background-color: transparent;
+    border:transparent ; 
+}
+
+@media only screen and (max-width: 1000px){
+#activas{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 20px;
+}
+}
+    
 
 .ft{
     background-color: rgb(109, 118, 126);
