@@ -41,28 +41,28 @@
       "tipo": "estudiante"
     },
     {
-      "id": "6c77",
-      "usuario": "",
-      "password": "",
-      "telefono": "",
-      "sede": "Puntarenas",
-      "tipo": "estudiante"
-    },
-    {
-      "id": "aa8f",
-      "usuario": "",
-      "password": "",
-      "telefono": "",
-      "sede": "Puntarenas",
-      "tipo": "estudiante"
-    },
-    {
       "id": "26a4",
       "usuario": "sergio",
       "password": "123",
       "telefono": "6152725",
       "sede": "Puntarenas",
       "tipo": "estudiante"
+    },
+    {
+      "id": "c0f1",
+      "usuario": "Wendy",
+      "password": "1234",
+      "telefono": "86864282",
+      "correo": "wendy@gmail.com",
+      "tipo": "profesor"
+    },
+    {
+      "id": "a880",
+      "usuario": "Elena",
+      "password": "hhf",
+      "telefono": "868642836",
+      "correo": "elena@gmail.com",
+      "tipo": "profesor"
     }
   ],
   "consultas": [
@@ -70,11 +70,11 @@
       "id": "bea2",
       "consulta": "como se usa el .filter",
       "fecha": "2025-08-28T21:00:37.352Z",
-      "estado": true,
+      "estado": false,
       "profesor": "Steven",
       "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "hjh"
     },
     {
       "id": "8a75",
@@ -85,6 +85,7 @@
       "usuario": "roger",
       "sede": "Puntarenas",
       "comentario": "investigue "
+      "comentario": "Investigue"
     },
     {
       "id": "d64b",
@@ -100,41 +101,111 @@
       "id": "68d9",
       "consulta": "gato",
       "fecha": "2025-08-29T14:10:32.983Z",
-      "estado": true,
+      "estado": false,
       "profesor": "Barry",
       "usuario": "sergio",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "ingestigue"
     },
     {
-      "id": "63af",
-      "consulta": "prueba 2",
-      "fecha": "2025-08-29T14:54:31.085Z",
-      "estado": true,
+      "id": "34c8",
+      "consulta": "gato",
+      "fecha": "2025-08-29T16:12:25.507Z",
+      "estado": false,
       "profesor": "Steven",
-      "usuario": "roger",
+      "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": ""
+      "comentario": "ff"
     },
     {
-      "id": "ddf8",
-      "consulta": "prueba 3",
-      "fecha": "2025-08-29T16:03:38.417Z",
-      "estado": true,
-      "profesor": "Jean Carlos",
-      "usuario": "roger",
-      "sede": "Puntarenas",
-      "comentario": ""
-    },
-    {
-      "id": "0922",
-      "consulta": "dfs",
-      "fecha": "2025-08-29T16:06:31.815Z",
+      "id": "ca0d",
+      "consulta": "f",
+      "fecha": "2025-08-29T16:12:56.699Z",
       "estado": false,
       "profesor": "Barry",
-      "usuario": "roger",
+      "usuario": "caleb",
       "sede": "Puntarenas",
-      "comentario": "sfd"
+      "comentario": "investigue"
+    },
+    {
+      "id": "7050",
+      "consulta": "cbdgfsn",
+      "fecha": "2025-08-29T16:12:56.699Z",
+      "estado": false,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "investigue"
+    },
+    {
+      "id": "67eb",
+      "consulta": "gato",
+      "fecha": "2025-08-29T20:35:32.739Z",
+      "estado": false,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "ugur"
+    },
+    {
+      "id": "bdac",
+      "consulta": "jukhdhcj",
+      "fecha": "2025-08-29T21:43:55.555Z",
+      "estado": false,
+      "profesor": "Steven",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "hola"
+    },
+    {
+      "id": "d9da",
+      "consulta": "Me estoy kgando",
+      "fecha": "2025-08-29T21:46:02.222Z",
+      "estado": true,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "6106",
+      "consulta": "ayudaaaaaaaa!",
+      "fecha": "2025-08-29T21:46:02.222Z",
+      "estado": true,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "7f8e",
+      "consulta": "ayudaaaaaaaa!",
+      "fecha": "2025-08-29T21:46:02.222Z",
+      "estado": true,
+      "profesor": "Barry",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "d06c",
+      "consulta": "como le encuentro sentido a mi vida",
+      "fecha": "2025-08-31T20:06:12.633Z",
+      "estado": false,
+      "profesor": "Jean Carlos",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "busquelo"
+    },
+    {
+      "id": "a565",
+      "consulta": "gato",
+      "fecha": "2025-08-31T20:11:38.013Z",
+      "estado": false,
+      "profesor": "Jean Carlos",
+      "usuario": "caleb",
+      "sede": "Puntarenas",
+      "comentario": "gata"
     }
   ]
 }

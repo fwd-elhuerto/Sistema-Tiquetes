@@ -1,3 +1,4 @@
 # Ignorar la carpeta de node_modules
 /node_modules/
 db.json
+
