@@ -1,5 +1,4 @@
 // Elementos del DOM
-const histConsultas =document.getElementById("histConsultas")
 const activas =document.getElementById("activas");
 const btnModalProfe =document.getElementById("btnModalProfe")
 const modalProfe =document.getElementById("modalProfe")
@@ -8,10 +7,7 @@ const UC =document.getElementById("UC")
 const UT =document.getElementById("UT")
 const correo =document.getElementById("correo")
 const btRegistro =document.getElementById("btRegistro")
-const btnModalHistorial =document.getElementById("btnModalHistorial")
-const modalHistorial =document.getElementById("historial")
-const hisAtendidas =document.getElementById("hisAtendidas")
-const btnOkHist =document.getElementById("btnOkHist")
+const btnHistorial =document.getElementById("btnModalHistorial")
 const btnModalFrecuencia =document.getElementById("btnModalFrecuencia")
 const frecuencia =document.getElementById("frecuencia")
 const divFrecuencia =document.getElementById("divFrecuencia")
@@ -44,17 +40,13 @@ btnModalProfe.addEventListener("click", function () {// mostrar modal de registr
     modalProfe.showModal();
 })
 
-btnModalHistorial.addEventListener("click", function () {// mostrar modal de historial de consulttas
-    modalHistorial.showModal();
+btnHistorial.addEventListener("click", function () {// mostrar modal de historial de consulttas
+   window.location.href = "../pages/estadistica.html";
 })
 
 btnModalFrecuencia.addEventListener("click", async function () { // mostrar modal de frecuentes
     frecuencia.showModal();
     await mostrarFrecuencia()
-})
-
-btnOkHist.addEventListener("click", async function () { // cerrar modal historial
-        await modalHistorial.close()
 })
 
 btnOkFre.addEventListener("click", async function () { // cerrar modal frencuentes
@@ -68,7 +60,7 @@ btRegistro.addEventListener("click", async function () {
         if (usuarioExistente) {
             Swal.fire('Error', 'El nombre de usuario ya está registrado. Elige otro.', 'error');
             await modalProfe.close()
-            return; // return para que no registre apesar del error
+            return; // return para que no registre a pesar del error
         }
 
         const usuario= {
@@ -92,14 +84,13 @@ async function buscarConsultas() {
     const dudaRecibida = await getConsultas(); // 
     let search =dudaRecibida.filter(filtroNommbre => filtroNommbre.usuario.toLowerCase().includes(busqueda.value.toLowerCase()) || filtroNommbre.consulta.toLowerCase().includes(busqueda.value.toLowerCase()) )
     // .filter para buscar valores en la lista, .toLowerCase para que no afecte la mayúscula
-    hisAtendidas.textContent = "";
+   activas.textContent = "";
     mostrarConsulta(search)
 }
 
 async function mostrarConsulta(lista = null) {
     const dudaRecibida = lista || await getConsultas();
     activas.textContent = "";
-    hisAtendidas.textContent = "";
     for (let index = 0; index < dudaRecibida.length; index++) {
         const elementCon = dudaRecibida[index];
 
@@ -112,7 +103,7 @@ async function mostrarConsulta(lista = null) {
         let atender2 = document.createElement("label");
         let atender = document.createElement("input");
         let inputComentario = document.createElement("input");
-        let comentario = document.createElement("p");
+        let espaciado = document.createElement("br");
     
         usuario.textContent="Estudiante: " + " " + elementCon.usuario;
         consulta.textContent= elementCon.consulta;
@@ -120,7 +111,6 @@ async function mostrarConsulta(lista = null) {
         fecha.textContent = "Generada: " + fechaFormateada;
         sede.textContent ="Sede: " + " " + elementCon.sede;
         profe.textContent ="Dirigida a:" + " " + elementCon.profesor;
-        comentario.textContent = "Retroalimentación: " + elementCon.comentario
         atender.type = 'checkbox'
         atender2.textContent = "Marcar como atendido"
         inputComentario.type = "text";
@@ -135,6 +125,7 @@ async function mostrarConsulta(lista = null) {
             areaConsulta.appendChild(sede);
             areaConsulta.appendChild(profe);
             areaConsulta.appendChild(inputComentario);
+            areaConsulta.appendChild(espaciado)
             areaConsulta.appendChild(atender2);
             areaConsulta.appendChild(atender);
             areaConsulta.style.backgroundColor = "black"
@@ -157,18 +148,7 @@ async function mostrarConsulta(lista = null) {
             }
         })
 
-        } else if (elementCon.profesor === usuarioLogueado && elementCon.estado === false) {
-                hisAtendidas.appendChild(areaConsulta)
-                areaConsulta.appendChild(usuario);
-                areaConsulta.appendChild(consulta);
-                areaConsulta.appendChild(fecha);
-                areaConsulta.appendChild(sede);
-                areaConsulta.appendChild(profe);
-                areaConsulta.appendChild(comentario)
-                areaConsulta.style.backgroundColor = "black" 
-                areaConsulta.style.borderRadius = "20px";
-                areaConsulta.style.border = "2px solid black";
-                }
+        } 
     }
 
 }

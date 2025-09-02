@@ -1,0 +1,73 @@
+.all{
+background-color: beige;
+}
+header{
+    background-color: darkviolet;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+h3{
+    font-size: larger;
+}
+p{
+    font-size: large;
+}
+
+.lbSalir{
+    background-color: rgb(222, 218, 240);
+    border-radius: 20px;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#btnModalHistorial{
+    right: 0%;
+    float: right;
+}
+.container{
+    background-image: url(../imagenes/menu_bg_fx.png);
+    color: aliceblue;
+    border-radius: 20px;
+}
+#hisAtendidas{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 20px;
+}
+.BT{
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.BT2{
+    background-color: transparent;
+    border:transparent ; 
+}
+
+#cerrarS{
+    right: 0%;
+    top: 0%;
+    float: right;
+    
+}
+
+
+@media only screen and (max-width: 1000px){
+#hisAtendidas{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 20px;
+}
+}
+    
+
+.ft{
+    background-color: rgb(109, 118, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    height: 100px;
+    margin-top: auto; 
+}

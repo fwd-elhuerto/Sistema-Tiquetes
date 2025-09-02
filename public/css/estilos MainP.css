@@ -41,6 +41,8 @@ label{
 #areaBT{
     display: flex;
     right: 0;
+    float: right;
+    gap: 10px;
 }
 #modalProfe{
     border-radius: 20px;

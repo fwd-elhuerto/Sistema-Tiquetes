@@ -109,6 +109,66 @@
       "usuario": "caleb",
       "sede": "Puntarenas",
       "comentario": "no moleste"
+    },
+    {
+      "id": "03c9",
+      "consulta": "1",
+      "fecha": "2025-09-02T14:47:27.189Z",
+      "estado": false,
+      "profesor": "Steven",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": "1"
+    },
+    {
+      "id": "68a3",
+      "consulta": "2",
+      "fecha": "2025-09-02T14:47:27.189Z",
+      "estado": false,
+      "profesor": "Steven",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": "2"
+    },
+    {
+      "id": "55ad",
+      "consulta": "3",
+      "fecha": "2025-09-02T14:47:27.189Z",
+      "estado": false,
+      "profesor": "Steven",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": "3"
+    },
+    {
+      "id": "9fe2",
+      "consulta": "4",
+      "fecha": "2025-09-02T14:47:27.189Z",
+      "estado": true,
+      "profesor": "Steven",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "c1ce",
+      "consulta": "5",
+      "fecha": "2025-09-02T14:47:27.189Z",
+      "estado": true,
+      "profesor": "Steven",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": ""
+    },
+    {
+      "id": "faeb",
+      "consulta": "6",
+      "fecha": "2025-09-02T14:47:27.189Z",
+      "estado": true,
+      "profesor": "Steven",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": ""
     }
   ]
 }

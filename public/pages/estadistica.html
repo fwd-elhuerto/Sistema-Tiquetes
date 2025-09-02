@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>estadística</title>
-    <link rel="stylesheet" href="../css/estilos MainP.css">
+    <link rel="stylesheet" href="../css/estadistica.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class="all">
     <header class="text-white">
-    <img src="../imagenes/letras blancas-Logo.png" alt="">
+        <img src="../imagenes/letras blancas-Logo.png" alt="">
         <div id="cerrarS">
             <button id="btnSalir" class="BT2"><img src="../imagenes/flecha izquierda.png" alt=""></button><br>
             <label class="lbSalir" for="btnSalir">Cerrar sección</label>
         </div>
     <p id="welcome">Bienvenido </p>
-    </header>  
+    </header><br><br>  
 
+        <button id="btnModalHistorial" class="BT">Regresar a pendientes</button><br><br>
+        <div class="container">
+            <h3>Consultas atendidas</h3><br><br>
+            <input id="busqueda" type="search" placeholder="Buscar por estudiante o consulta">
+            <button id="buscar">Buscar</button>
+            <br><br>
+            <div id="hisAtendidas" class="text-white"></div>
+            <br><br>
+        </div>
 
-        <h3>Consultas atendidas</h3><br>
-        <input id="busqueda" type="search" placeholder="Buscar por estudiante o consulta">
-        <button id="buscar">Buscar</button>
-        <div id="hisAtendidas"></div>
-        <br><br>
+        <br><br><br>
+        <footer class="ft">
+        <img src="../imagenes/footer.png" alt="">
 
+        <div>
+        <h3>Socioemocional</h3>
+            <ul>
+                <li>wzuniga@fwdcostarica.com</li>
+                <li>Tel: +506 8301-0424</li>
+            </ul>
+            </div><br>
+        
+        <div>
+            <h3>Profesores</h3>
+            <ul>
+                <li>bvega@fwdcostarica.com</li>
+                <li>ssalasl@fwdcostarica.com</li>
+            </ul>
+        </div>
 
+        <div>
+        <br><br><br><br>
+        <p>© 2025 by FWD</p>
+        </div>
 
+    </footer>
+
+<script type="module" src="../js/estadistica.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
