@@ -15,14 +15,14 @@ import { getUsuarios,postUsuarios } from "../services/servicesUsuarios.js"
 /* el boton para guardar los usuarios  */
 btRegistro.addEventListener("click", async function () {
     /* crear una constante que guarde las carateristicas de los usuario (un objeto) */
-   if (UN.value != "" && UT.value != "" && UC.value.length > 8)  {
-        const usuariosExistentes = await getUsuarios(); // linea que agrego caleb guaradr
-        const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value); // linea que agrego caleb guaradr
+   if (UN.value.length > 3 && UT.value.length > 8 && UC.value.length > 8)  {
+        const usuariosExistentes = await getUsuarios(); 
+        const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value); // .find para buscar si ya existe el usuario
 
-    if (usuarioExistente) {// linea que agrego caleb guaradr
+    if (usuarioExistente) {
         Swal.fire('Error', 'El nombre de usuario ya está registrado. Elige otro.', 'error');
         return;
-    }// linea que agrego caleb guaradr
+    }
 
 
         const usuario= {
@@ -38,7 +38,7 @@ btRegistro.addEventListener("click", async function () {
     window.location.href = "login.html";
         
     } else {
-        Swal.fire('Error al ingresar', 'Llene Todos Los Campos Solicitados', 'error');
+        Swal.fire('Error al ingresar', 'Los datos ingresados no cumplen con los requerimientos', 'error');
         }
     
 })

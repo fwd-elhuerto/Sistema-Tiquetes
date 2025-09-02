@@ -54,13 +54,13 @@ btnOkFre.addEventListener("click", async function () { // cerrar modal frencuent
 })
 
 btRegistro.addEventListener("click", async function () {
-    if (UN.value!="" && UC.value!="" && UT.value!="" ) { // validacion para espacios vacios
-        const usuariosExistentes = await getUsuarios();
-        const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value); // validacion para usuario registrado
+     if (UN.value.length > 3 && UT.value.length > 8 && UC.value.length > 8)  {
+            const usuariosExistentes = await getUsuarios(); 
+            const usuarioExistente = usuariosExistentes.find(u => u.usuario === UN.value); // .find para buscar si ya existe el usuario
+    
         if (usuarioExistente) {
             Swal.fire('Error', 'El nombre de usuario ya está registrado. Elige otro.', 'error');
-            await modalProfe.close()
-            return; // return para que no registre a pesar del error
+            return;
         }
 
         const usuario= {
@@ -74,7 +74,7 @@ btRegistro.addEventListener("click", async function () {
         Swal.fire('Completado', 'Nuevo administrador agregado correctamente', 'success');
         modalProfe.close()
     }else {
-       Swal.fire('Error al ingresar', 'Llene todos los campos solicitados', 'error');
+       Swal.fire('Error al ingresar', 'Los datos ingresados no cumplen con los requerimientos', 'error');
         await modalProfe.close()
     }  
   })

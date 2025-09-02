@@ -87,6 +87,30 @@
       "telefono": "53898438953",
       "sede": "Puntarenas",
       "tipo": "estudiante"
+    },
+    {
+      "id": "70dc",
+      "usuario": "a",
+      "password": "a",
+      "telefono": "4",
+      "correo": "a",
+      "tipo": "profesor"
+    },
+    {
+      "id": "0550",
+      "usuario": "ana",
+      "password": "1234512345",
+      "telefono": "7867876768",
+      "sede": "La capri",
+      "tipo": "estudiante"
+    },
+    {
+      "id": "1ca6",
+      "usuario": "Steven1",
+      "password": "1234567890",
+      "telefono": "786576767",
+      "sede": "Puntarenas",
+      "tipo": "estudiante"
     }
   ],
   "consultas": [
@@ -169,6 +193,16 @@
       "usuario": "roger",
       "sede": "Puntarenas",
       "comentario": ""
+    },
+    {
+      "id": "20ab",
+      "consulta": "7",
+      "fecha": "2025-09-02T15:43:15.154Z",
+      "estado": false,
+      "profesor": "Steven",
+      "usuario": "roger",
+      "sede": "Puntarenas",
+      "comentario": "rtyrytyrytyryt"
     }
   ]
 }
